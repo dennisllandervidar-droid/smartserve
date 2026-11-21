@@ -1,0 +1,28 @@
+# Turn on the rewrite engine
+RewriteEngine On
+
+# ----------------------------------------------------
+# 1. HIDE / REMOVE .php EXTENSION
+# ----------------------------------------------------
+# If the request is not a valid directory...
+RewriteCond %{REQUEST_FILENAME} !-d
+# And if the request is not a valid file...
+RewriteCond %{REQUEST_FILENAME} !-f
+# And if a file with the requested name + .php exists...
+RewriteCond %{REQUEST_FILENAME}.php -f
+# Rewrite the URL to append .php internally (user won't see it)
+RewriteRule ^(.*)$ $1.php [L]
+
+# ----------------------------------------------------
+# 2. REDIRECT ALL ERRORS TO INDEX.PHP
+# ----------------------------------------------------
+# 400 Bad Request
+ErrorDocument 400 /index.php
+# 401 Unauthorized
+ErrorDocument 401 /index.php
+# 403 Forbidden
+ErrorDocument 403 /index.php
+# 404 Not Found
+ErrorDocument 404 /index.php
+# 500 Internal Server Error
+ErrorDocument 500 /index.php

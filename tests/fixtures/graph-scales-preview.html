@@ -1,0 +1,107 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Graph scale verification</title><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><style>body{font:16px Arial;background:#f5f7f8;margin:0;padding:24px}main{max-width:1000px;margin:auto}section{background:white;border-radius:12px;padding:20px;margin:20px 0}.chart{position:relative;height:330px}h1{font-size:24px}h2{font-size:20px}</style><main><h1>Weekday graph verification</h1><p>Synthetic data using the production chart configuration. Both charts include a count of 13.</p><section><h2>Weekly Traffic Volume</h2><div class="chart"><canvas id="daysChart"></canvas></div></section><section><h2>Peak Hours Analysis</h2><div class="chart"><canvas id="hoursChart"></canvas></div></section></main><script>
+        // Keep low-volume charts readable without capping larger counts.
+        function serviceVisitAxis(data) {
+            return {
+                title: { display: true, text: 'Number of service visits', color: '#4a5568', font: { weight: '600' } },
+                beginAtZero: true,
+                suggestedMax: Math.max(5, ...data),
+                ticks: { precision: 0, maxTicksLimit: 8, color: '#8795a1', font: { weight: '600' } },
+                grid: { borderDash: [4, 4], color: '#f1f3f5' }
+            };
+        }
+        // ---------------------------------------------------------
+        // CHART 1: DAYS OF THE WEEK
+        // ---------------------------------------------------------
+        const ctxDays = document.getElementById('daysChart').getContext('2d');
+        
+        // Dynamic PHP Data injected here
+        const daysLabels = ["Monday","Tuesday","Wednesday","Thursday","Friday"];
+        const daysData = [2,13,7,4,9];
+        
+        new Chart(ctxDays, {
+            type: 'bar',
+            data: {
+                labels: daysLabels,
+                datasets: [{
+                    label: 'Service Visits',
+                    data: daysData,
+                    backgroundColor: 'rgba(0, 81, 65, 0.8)', // Primary Color
+                    borderColor: 'rgba(0, 81, 65, 1)',
+                    borderWidth: 1,
+                    borderRadius: 6,
+                    barPercentage: 0.6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#2d3436',
+                        padding: 12,
+                        titleFont: { size: 14, family: 'Arial' },
+                        bodyFont: { size: 14, weight: 'bold', family: 'Arial' }
+                    }
+                },
+                scales: {
+                    y: serviceVisitAxis(daysData),
+                    x: {
+                        title: { display: true, text: 'Day of the week', color: '#4a5568', font: { weight: '600' } },
+                        ticks: { color: '#4a5568', font: { weight: 'bold' } },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // ---------------------------------------------------------
+        // CHART 2: HOURLY PEAK TIMES
+        // ---------------------------------------------------------
+        const ctxHours = document.getElementById('hoursChart').getContext('2d');
+        
+        // Dynamic PHP Data injected here
+        const hoursLabels = ["08 AM","09 AM","10 AM"];
+        const hoursData = [1,13,6];
+        
+        new Chart(ctxHours, {
+            type: 'line', // Line chart is better for showing time trends!
+            data: {
+                labels: hoursLabels,
+                datasets: [{
+                    label: 'Service Visits',
+                    data: hoursData,
+                    backgroundColor: 'rgba(255, 193, 7, 0.2)', // Yellow tint for fill
+                    borderColor: 'rgba(255, 193, 7, 1)', // Solid Yellow line
+                    borderWidth: 3,
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: 'rgba(255, 193, 7, 1)',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7,
+                    fill: true,
+                    tension: 0.3 // Adds a smooth curve to the line
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#2d3436',
+                        padding: 12,
+                        titleFont: { size: 14, family: 'Arial' },
+                        bodyFont: { size: 14, weight: 'bold', family: 'Arial' }
+                    }
+                },
+                scales: {
+                    y: serviceVisitAxis(hoursData),
+                    x: {
+                        ticks: { color: '#4a5568', font: { weight: 'bold' } },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    </script></html>

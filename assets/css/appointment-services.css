@@ -1,0 +1,21 @@
+.ss-ticket-status,.ss-service-status{display:inline-block;padding:6px 12px;border-radius:16px;font-size:.8rem;font-weight:700;line-height:1.4;white-space:normal}
+.ss-ticket-pending,.ss-service-pending{background:#fff3cd;color:#856404}
+.ss-ticket-progress,.ss-service-queued,.ss-service-serving{background:#e2f3ea;color:#155724}
+.ss-ticket-completed,.ss-service-completed{background:#e1eefc;color:#174d7d}
+.ss-ticket-partial,.ss-service-blocked{background:#fff0db;color:#80520d}
+.ss-ticket-rescheduled,.ss-service-rescheduled{background:#eee8fa;color:#573b89}
+.ss-ticket-cancelled,.ss-service-cancelled{background:#fbe5e7;color:#8a2630}
+.ss-service-count{color:#455667;font-size:.9rem;margin:0 0 12px}
+.ss-service-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ss-service-row{padding:14px 16px;border:1px solid #e2e9e6;border-radius:12px;background:#fafcfb;overflow-wrap:anywhere}
+.ss-service-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#263c32}
+.ss-service-row p{margin:7px 0 0;font-size:.85rem;color:#52606d;line-height:1.5}
+.ss-service-row a{display:inline-block;margin-top:8px;font-size:.85rem;font-weight:600;color:#087830;text-decoration:underline}
+.ss-service-progress-compact{margin-top:12px}
+.ss-service-progress-compact .ss-service-list{gap:6px}
+.ss-service-progress-compact .ss-service-row{padding:7px 10px;background:#fff}
+.ss-service-progress-compact .ss-service-heading{font-size:.85rem}
+.ss-service-progress-compact .ss-service-status{font-size:.75rem;padding:3px 8px}
+.ss-service-origin{padding:12px 16px;border-radius:10px;background:#eee8fa;color:#573b89;margin-bottom:20px;font-size:.9rem}
+.ss-service-origin a{color:inherit;text-decoration:underline;font-weight:600}
+@media(max-width:600px){.ss-service-heading{align-items:flex-start;flex-wrap:wrap}.ss-service-status{max-width:100%}.ticket-right{padding:25px!important}.tracking-number{overflow-wrap:anywhere;max-width:100%;font-size:1.4rem!important}}

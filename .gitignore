@@ -1,0 +1,29 @@
+# Machine-specific settings and secrets
+/global/*.local.php
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# User uploads and private documents
+/storage/private/pwd/*
+!/storage/private/pwd/.gitkeep
+/assets/img/announcement/*
+!/assets/img/announcement/.gitkeep
+/assets/img/profile-pictures/*
+!/assets/img/profile-pictures/default.jpg
+/files/*
+!/files/.gitkeep
+
+# Backups, database exports, logs, and local test state
+/database/backups/
+*.log
+*.bak
+*.zip
+*.sql.gz
+/u*_*.sql
+/tests/.database-backup-path
+/global/*.lock
+.DS_Store
+Thumbs.db

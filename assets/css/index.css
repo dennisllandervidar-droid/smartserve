@@ -1,0 +1,32 @@
+  body {
+    font-family: 'Open Sans', 'Roboto', sans-serif; /* Body font */
+    font-weight: 400;
+    color: #333;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', 'Poppins', 'Lato', sans-serif; /* Heading font */
+    font-weight: 600;
+  }
+  .primary {
+    color: #25aae2;
+  }
+  #testimonials .custom-control {
+    width: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f8f9fa;
+    border: none;
+  }
+  #testimonials .custom-control i {
+    font-size: 2.5rem;
+    color: #25aae2; /* Brand color */
+    transition: 0.3s ease;
+  }
+  #testimonials .custom-control i:hover {
+    color: #1e90c6; /* Slightly darker on hover */
+    transform: scale(1.1);
+  }
+  #testimonials .carousel-item {
+    transition: transform 0.8s ease-in-out;
+  }

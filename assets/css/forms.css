@@ -1,0 +1,69 @@
+.ss-modal-backdrop { position:fixed; inset:0; z-index:2147483646; display:flex; align-items:center; justify-content:center; padding:20px; background:rgba(15,23,42,.58); backdrop-filter:blur(3px); font-family:Inter,"Segoe UI",sans-serif; }
+.ss-modal { box-sizing:border-box; width:100%; max-width:440px; max-height:90vh; overflow:auto; padding:30px; border:0; border-radius:20px; background:#fff; color:#172b24; box-shadow:0 24px 80px rgba(0,0,0,.25); text-align:center; animation:ss-modal-in .18s ease-out; }
+.ss-modal-icon { display:flex; align-items:center; justify-content:center; width:68px; height:68px; margin:0 auto 18px; border-radius:50%; background:#fde8e8; color:#c62828; }
+.ss-modal-icon svg { width:36px; height:36px; }
+.ss-modal[data-type="success"] .ss-modal-icon { background:#e5f5eb; color:#087830; }
+.ss-modal[data-type="warning"] .ss-modal-icon { background:#fff3d7; color:#a96600; }
+.ss-modal[data-type="info"] .ss-modal-icon { background:#e8f1ff; color:#2563eb; }
+.ss-modal h2 { margin:0 0 12px; font-size:23px; line-height:1.3; font-weight:700; color:#172b24 !important; }
+.ss-modal p { margin:0 0 24px; font-size:15px; line-height:1.6; white-space:pre-line; overflow-wrap:anywhere; color:#50625b !important; }
+.ss-modal-actions { display:flex; justify-content:center; gap:10px; }
+.ss-modal button, .ss-validation-page button { border:0; border-radius:10px; padding:11px 24px; background:#087830; color:#fff !important; font:600 14px Inter,"Segoe UI",sans-serif; cursor:pointer; }
+.ss-modal button.ss-modal-cancel { background:#eef2f0; color:#33483e !important; }
+.ss-modal button:focus-visible { outline:3px solid #93c5fd; outline-offset:3px; }
+.ss-modal-open { overflow:hidden !important; }
+.ss-field-error { display:block; margin-top:6px; color:#c62828; font-size:12px; line-height:1.45; font-weight:600; }
+.reg-body .ss-field-error { color:#ffaaa5; }
+.ss-invalid { border-color:#d32f2f !important; }
+.office-grid.ss-invalid { outline:2px solid #d32f2f; outline-offset:6px; border-radius:10px; }
+.ss-password-field { position:relative; }
+.ss-password-field input { padding-right:48px !important; }
+.ss-password-field .ss-password-toggle { position:absolute; top:50%; right:6px; transform:translateY(-50%); display:grid; place-items:center; width:36px; height:36px; margin:0; padding:6px; border:0; border-radius:6px; background:transparent; color:#718579; cursor:pointer; box-shadow:none; }
+.ss-password-toggle svg { width:21px; height:21px; }
+.ss-password-toggle:focus-visible { outline:2px solid #087830; outline-offset:1px; }
+.ss-block-notices { margin-bottom:28px; color:#785516; }
+.ss-block-notices h5 { font-size:18px; color:#785516; }
+.ss-block-notice { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-top:12px; padding:22px; border:1px solid #ebd49c; border-radius:14px; background:#fff9e9; }
+.ss-block-notice p { margin:6px 0 0; font-size:14px; line-height:1.5; overflow-wrap:anywhere; }
+.ss-block-review { flex-shrink:0; display:inline-block; padding:10px 16px; border-radius:8px; background:#785516; color:#fff !important; font-weight:600; text-decoration:none; }
+.ss-blocked-status { margin-top:8px; color:#785516; font-size:13px; font-weight:700; }
+[id^="blocked-appointment-"] { scroll-margin-top:100px; }
+@media(max-width:600px) { .ss-block-notice { align-items:flex-start; flex-direction:column; } }
+#pwd-id-wrap[hidden] { display:none !important; }
+.ss-validation-page { margin:0; min-height:100vh; display:grid; place-items:center; background:#f4f8f5; font-family:Inter,"Segoe UI",sans-serif; color:#172b24; }
+.ss-validation-page main { max-width:480px; padding:32px; text-align:center; }
+@keyframes ss-modal-in { from { opacity:0; transform:translateY(12px) scale(.97); } to { opacity:1; transform:translateY(0) scale(1); } }
+@media (prefers-reduced-motion:reduce) { .ss-modal { animation:none; } }
+.ss-priority-card { margin:32px 40px; padding:26px; border:1px solid #dceae4; background:linear-gradient(130deg,#f1f8f4 0%,#fff 70%); border-radius:18px; color:#234439; box-shadow:0 6px 22px rgba(0,81,65,.04); }
+.ss-priority-heading,.ss-priority-title { display:flex; align-items:center; gap:14px; }
+.ss-priority-heading { justify-content:space-between; flex-wrap:wrap; gap:18px; }
+.ss-priority-emblem { display:grid; place-items:center; width:48px; height:48px; flex-shrink:0; border-radius:14px; background:linear-gradient(145deg,#006a53,#004737); color:#fff; box-shadow:0 5px 12px rgba(0,81,65,.16); }
+.ss-priority-card svg { width:19px; height:19px; flex-shrink:0; }
+.ss-priority-emblem svg { width:26px; height:26px; }
+.ss-priority-card h5 { margin:0 0 4px; color:#005141; font-size:18px; font-weight:700; line-height:1.4; }
+.ss-priority-title p { margin:0; color:#72867c; font-size:13px; line-height:1.5; }
+.ss-priority-status { display:inline-flex; align-items:center; gap:7px; padding:7px 12px; border:1px solid #dce6e0; background:#f1f5f3; color:#61776c; font-size:12px; font-weight:600; border-radius:30px; }
+.ss-priority-card[data-review="pending"] .ss-priority-status { background:#fff3dc; border-color:#f0dfb9; color:#986916; }
+.ss-priority-card[data-review="approved"] .ss-priority-status { background:#e4f4eb; border-color:#c7e8d7; color:#187349; }
+.ss-priority-card[data-review="rejected"] .ss-priority-status { background:#fbecef; border-color:#f2d0d7; color:#ab4258; }
+.ss-priority-details { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:23px 0 18px; padding:17px 20px; background:rgba(255,255,255,.85); border:1px solid #e5eee8; border-radius:12px; }
+.ss-priority-details>div+div { border-left:1px solid #e5eee8; padding-left:20px; }
+.ss-priority-label { display:block; margin-bottom:8px; color:#7b8c83; font-size:11px; font-weight:700; letter-spacing:.7px; text-transform:uppercase; }
+.ss-priority-details strong { color:#294b3e; font-size:14px; font-weight:600; }
+.ss-priority-value { display:inline-block; background:#edf3ef; padding:3px 10px; border-radius:6px; }
+.ss-priority-card .ss-priority-note { display:flex; align-items:flex-start; gap:9px; margin:0 0 20px; color:#718579; font-size:13px; line-height:1.6; }
+.ss-priority-note svg { margin-top:1px; }
+.ss-priority-actions { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-top:19px; border-top:1px solid #dfeae3; }
+.ss-priority-actions form { display:flex; flex-wrap:wrap; gap:10px; margin:0; }
+.ss-priority-card .ss-priority-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:11px 17px; min-height:44px; border:1px solid transparent; border-radius:10px; font-family:inherit; font-size:13px; font-weight:600; line-height:1.4; text-decoration:none; cursor:pointer; transition:background .18s,box-shadow .18s,transform .18s; }
+.ss-priority-card .ss-priority-view { color:#00644d; background:#e7f2ec; border-color:#cbded3; }
+.ss-priority-card .ss-priority-approve { color:#fff; background:linear-gradient(135deg,#08785b,#005141); box-shadow:0 4px 10px rgba(0,81,65,.15); }
+.ss-priority-card .ss-priority-reject { color:#ad3e55; background:#fceef1; border-color:#f2d3db; }
+.ss-priority-card .ss-priority-view:hover { background:#d9ece1; color:#004737; }
+.ss-priority-card .ss-priority-approve:hover { background:linear-gradient(135deg,#00684d,#003e31); color:#fff; box-shadow:0 6px 14px rgba(0,81,65,.2); }
+.ss-priority-card .ss-priority-reject:hover { background:#f8dfe6; color:#922c43; }
+.ss-priority-card .ss-priority-btn:hover { transform:translateY(-1px); }
+.ss-priority-card .ss-priority-btn:focus-visible { outline:3px solid #8db8a8; outline-offset:3px; }
+@media(max-width:768px) { .ss-priority-card { margin:20px; padding:20px; } }
+@media(max-width:480px) { .ss-priority-heading { align-items:flex-start; } .ss-priority-details { gap:12px; padding:14px; } .ss-priority-details>div+div { padding-left:12px; } .ss-priority-actions { align-items:stretch; } .ss-priority-actions form { width:100%; } .ss-priority-actions form .ss-priority-btn { flex:1; } }
+@media(prefers-reduced-motion:reduce) { .ss-priority-card .ss-priority-btn { transition:none; } .ss-priority-card .ss-priority-btn:hover { transform:none; } }

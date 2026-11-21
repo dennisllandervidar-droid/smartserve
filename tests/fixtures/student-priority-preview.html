@@ -1,0 +1,97 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student priority field preview</title><link rel="stylesheet" href="../../assets/css/forms.css?v=1791914479"><link rel="stylesheet" href="../../dashboard/assets/css/assets.css"><link rel="stylesheet" href="../../dashboard/assets/css/typography.css"><link rel="stylesheet" href="../../dashboard/assets/css/shortcodes/shortcodes.css"><link rel="stylesheet" href="../../dashboard/assets/css/style.css"><link rel="stylesheet" href="../../dashboard/assets/css/dashboard.css"><script src="../../assets/js/forms.js"></script><style>
+		.btn.dropdown-toggle.btn-default:hover {
+			color: #000!important;
+		}
+
+		.btn.dropdown-toggle.btn-default:focus {
+			color: #000!important;
+		}
+
+		.widget-card .icon {
+			position: absolute;
+			top: auto;
+			bottom: -20px;
+			right: 5px;
+			z-index: 0;
+			font-size: 65px;
+			color: rgba(0, 0, 0, 0.15);
+		}
+		:root {
+            --accent-gold: #005141;
+            --sidebar-bg: #D9D9D9;
+            --sidebar-hover: #C4C4C4;
+        }
+		.welcome-section { border-bottom: 3px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
+        .accent-text { color: var(--accent-gold); text-transform: uppercase; }
+        .about-title { color: var(--accent-gold); font-weight: bold; margin-bottom: 20px; }
+        .content-body { line-height: 1.6; text-align: justify; font-size: 0.95rem; }
+	body{background:#f5f8f6;padding:30px}.preview-wrap{max-width:950px;margin:auto;background:#fff;padding:30px;border-radius:18px}.preview-wrap>p{color:#73857b;font-size:13px}</style></head><body><main class="preview-wrap"><h3>Update Profile</h3><p>Student profile preview · no accounts are changed</p><form enctype="multipart/form-data" class="edit-profile" id="updateProfileForm" method="POST">
+							<div class="form-group row">
+							    <label class="col-sm-2 col-form-label">First Name</label>
+							    <div class="col-sm-7">
+							        <input title="Letters, spaces, and hyphens only." pattern="[\p{L}\p{M} \-]+" class="form-control" type="text" name="new_fname" maxlength="50" required
+							               value="Sample">
+							    </div>
+							</div>
+
+							<div class="form-group row">
+							    <label class="col-sm-2 col-form-label">Middle Name (optional)</label>
+							    <div class="col-sm-7">
+							        <input title="Letters, spaces, and hyphens only." pattern="[\p{L}\p{M} \-]+" class="form-control" type="text" name="new_mname" maxlength="50"
+							               value="">
+							    </div>
+							</div>
+
+							<div class="form-group row">
+							    <label class="col-sm-2 col-form-label">Last Name</label>
+							    <div class="col-sm-7">
+							        <input title="Letters, spaces, and hyphens only." pattern="[\p{L}\p{M} \-]+" class="form-control" type="text" name="new_lname" maxlength="50" required
+							               value="Student">
+							    </div>
+							</div>
+
+							<div class="form-group row">
+							    <label class="col-sm-2 col-form-label">Contact</label>
+							    <div class="col-sm-7">
+							        <input title="Use 09XXXXXXXXX (11 characters) or +639XXXXXXXXX (13 characters), without spaces or other characters." pattern="(?:09[0-9]{9}|\+639[0-9]{9})" maxlength="13" type="tel" class="form-control" name="new_contact" required
+							               value="09123456789">
+							    </div>
+							</div>
+
+							<div class="form-group row">
+							    <label class="col-sm-2 col-form-label">Address</label>
+							    <div class="col-sm-7">
+							        <input maxlength="120" class="form-control" type="text" name="new_address" required
+							               value="123 Sample Street">
+							    </div>
+							</div>
+
+							<div class="form-group row"><label class="col-sm-2 col-form-label" for="account_priority">Priority Type</label><div class="col-sm-7">
+                                <select class="form-control" name="account_priority" id="account_priority"><option>N/A</option><option>PWD</option><option>Senior Citizen</option><option>Pregnant</option></select>
+                            </div></div>
+                            <div class="form-group row" id="pwd-id-wrap" hidden>
+                                <label class="col-sm-2 col-form-label" for="pwd_id">PWD ID Photo</label>
+                                <div class="col-sm-7">
+                                    <input type="file" name="pwd_id" id="pwd_id" class="form-control" accept="image/jpeg,image/png"  disabled>
+                                    <small>JPG or PNG, up to 2 MB. Replacing the photo requires a new admin review.</small>
+                                </div>
+                            </div>
+                            <script src="../../assets/js/priority.js?v=1791914793" defer></script>
+                            <div class="row">
+                                <div class="col-sm-2">
+									</div>
+								<div class="col-sm-7">
+									<label class="col-form-label" id="message"></label><br>
+									
+									<div class="d-flex flex-wrap">
+										<button name="save_profile" type="submit" class="btn button-md radius-xl shadow-sm mb-2 mr-2" style="background-color: #28a745; color: white; border: none;">
+											<i class="ti-marker-alt"></i> <span>SAVE PROFILE</span>
+										</button>
+
+										<a href="my-profile" class="btn button-md radius-xl shadow-sm mb-2" style="background-color: #6c757d; color: white; border: none;">
+											<i class="ti-arrow-left"></i> <span>CANCEL</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</form></main><script src="../../dashboard/assets/js/jquery.min.js"></script><script src="../../dashboard/assets/vendors/bootstrap/js/popper.min.js"></script><script src="../../dashboard/assets/vendors/bootstrap/js/bootstrap.min.js"></script><script src="../../dashboard/assets/vendors/bootstrap-select/bootstrap-select.min.js"></script><script src="../../dashboard/assets/js/functions.js"></script><script>document.addEventListener("submit",event=>event.preventDefault(),true);document.querySelector("a[href=my-profile]").addEventListener("click",event=>event.preventDefault());</script></body></html>

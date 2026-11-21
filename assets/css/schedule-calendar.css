@@ -1,0 +1,20 @@
+.ss-calendar { border:1px solid #dce8e1; border-radius:14px; padding:16px; margin-bottom:12px; background:#fff; }
+.ss-calendar-switch { display:flex; gap:8px; margin-bottom:14px; }
+.ss-calendar button { border:1px solid #e2e9e5; border-radius:8px; background:#f4f8f5; color:#254a3b; padding:8px; cursor:pointer; }
+.ss-calendar button:hover:not(:disabled), .ss-calendar button.active, .ss-calendar button.selected { background:var(--primary-green,#005141); color:#fff; }
+.ss-calendar-heading { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+.ss-calendar-days { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:6px; }
+.ss-weekdays-only .ss-calendar-days { grid-template-columns:repeat(5,minmax(0,1fr)); }
+.ss-calendar-days button { min-height:38px; }
+.ss-calendar-days button:disabled { background:#ededed; color:#9aa19d; cursor:not-allowed; border-color:#e6e6e6; }
+.ss-calendar-weekday { text-align:center; font-size:11px; color:#61786a; }
+.ss-calendar-note { display:block; margin-top:12px; color:#61786a; }
+.ss-calendar-date[readonly] { background:#f4f8f5; cursor:default; }
+.ss-time-dialog { border:1px solid #dce8e1; border-radius:18px; padding:28px; width:min(680px,92vw); max-height:85vh; overflow:auto; color:#254a3b; }
+.ss-time-dialog::backdrop { background:rgba(0,45,36,.45); }
+.ss-time-dialog .btn {background:var(--primary-green,#005141);color:#fff;border:0;padding:10px 20px;border-radius:24px}
+form .time-slot.unavailable, form .time-slot.unavailable .time-text {background:#ededed;color:#8a9590;border-color:#e1e5e2;cursor:not-allowed}
+.ss-block-time {padding:12px;border:1px solid #dce8e1;border-radius:10px;font-size:12px;background:#f4faf7;margin-bottom:14px}
+.ss-block-time.unavailable {background:#eee;color:#8a9590}
+.ss-time-dialog .time-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+@media(max-width:480px) { .ss-time-dialog {padding:18px} .ss-time-dialog .time-grid {grid-template-columns:repeat(2,minmax(0,1fr))} }

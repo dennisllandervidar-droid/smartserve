@@ -1,0 +1,139 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SmartServe revision preview</title><link rel="stylesheet" href="../../dashboard/assets/css/assets.css"><link rel="stylesheet" href="../../dashboard/assets/css/style.css"><link rel="stylesheet" href="../../assets/css/forms.css"><script src="../../assets/js/forms.js"></script><style>body{background:#f4f8f5;padding:24px}main{max-width:850px;margin:auto;background:white;padding:24px;border-radius:16px}h2{font-size:20px;margin-top:28px}.form-control{margin-bottom:4px}form{padding:15px;border:1px solid #ddd}button[type=submit]{margin-top:12px}</style></head><body><main><h1>Revision preview</h1><p>Synthetic data · no profiles, bookings or passwords are saved.</p><section class="ss-block-notices" aria-labelledby="blocked-appointments-heading">
+    <h5 id="blocked-appointments-heading"><i class="ti-alert" aria-hidden="true"></i> Appointment updates requiring your action</h5>
+        <article class="ss-block-notice">
+        <div>
+            <strong>Cashier blocked your appointment</strong>
+            <p>Oct 22, 2026 at 09:00 AM · #PREVIEW-BOOKING</p>
+            <p><strong>Reason:</strong> Office maintenance</p>
+            <p><strong>Office note:</strong> Please choose another time. &lt;script&gt;alert(&quot;unsafe&quot;)&lt;/script&gt;</p>            <p>Review the office update to reschedule or cancel your appointment.</p>
+        </div>
+        <a href="booking#blocked-appointment-12" class="ss-block-review">Review update</a>
+    </article>
+    </section>
+<h2>Forgot Password</h2><form>
+                    <div class="col-12">
+                        <label class="form-label">New Password</label>
+                        <input minlength="8" maxlength="72" name="new_password" type="password" class="form-control" required>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Confirm New Password</label>
+                        <input minlength="8" maxlength="72" name="confirm_password" type="password" class="form-control" required>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <button type="submit" class="btn btn-register" name="reset_password">Save New Password</button>
+                    </div>
+                    </form><h2>Student profile · Update Password</h2><form class="edit-profile" method="POST">
+									<div class="">
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">Current Password</label>
+											<div class="col-sm-7">
+												<input maxlength="72" class="form-control" type="password" name="cpass" minlength="5" required>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">New Password</label>
+											<div class="col-sm-7">
+												<input minlength="8" maxlength="72" class="form-control" type="password" name="npass" id="password" required>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">Re Type Password</label>
+											<div class="col-sm-7">
+												<input minlength="8" maxlength="72" class="form-control" type="password" name="rpass" id="confirm_password" required>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-2">
+											</div>
+										<div class="col-sm-7">
+											<label class="col-form-label" id="message"></label><br>
+											
+											<div class="d-flex flex-wrap">
+												<button name="save_pass" type="submit" class="btn button-md radius-xl shadow-sm mb-2 mr-2" style="background-color: #007bff; color: white; border: none;">
+													<i class="ti-lock"></i> <span>SAVE PASSWORD</span>
+												</button>
+
+												<a href="my-profile" class="btn button-md radius-xl shadow-sm mb-2" style="background-color: #6c757d; color: white; border: none;">
+													<i class="ti-arrow-left"></i> <span>CANCEL</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</form><h2>Admin profile · Update Password</h2><form class="edit-profile" method="POST">
+									<div class="">
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">Current Password</label>
+											<div class="col-sm-7">
+												<input maxlength="72" class="form-control" type="password" name="cpass" minlength="5" required>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">New Password</label>
+											<div class="col-sm-7">
+												<input minlength="8" maxlength="72" class="form-control" type="password" name="npass" id="password" required>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">Re Type Password</label>
+											<div class="col-sm-7">
+												<input minlength="8" maxlength="72" class="form-control" type="password" name="rpass" id="confirm_password" required>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-2">
+											</div>
+										<div class="col-sm-7">
+											<label class="col-form-label" id="message"></label><br>
+											
+											<div class="d-flex flex-wrap">
+												<button name="save_pass" type="submit" class="btn button-md radius-xl shadow-sm mb-2 mr-2" style="background-color: #007bff; color: white; border: none;">
+													<i class="ti-lock"></i> <span>SAVE PASSWORD</span>
+												</button>
+
+												<a href="my-profile" class="btn button-md radius-xl shadow-sm mb-2" style="background-color: #6c757d; color: white; border: none;">
+													<i class="ti-arrow-left"></i> <span>CANCEL</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</form><h2>Office profile · Update Password</h2><form class="edit-profile" method="POST">
+									<div class="">
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">Current Password</label>
+											<div class="col-sm-7">
+												<input maxlength="72" class="form-control" type="password" name="cpass" minlength="5" required>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">New Password</label>
+											<div class="col-sm-7">
+												<input minlength="8" maxlength="72" class="form-control" type="password" name="npass" id="password" required>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">Re Type Password</label>
+											<div class="col-sm-7">
+												<input minlength="8" maxlength="72" class="form-control" type="password" name="rpass" id="confirm_password" required>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-2">
+											</div>
+										<div class="col-sm-7">
+											<label class="col-form-label" id="message"></label><br>
+											
+											<div class="d-flex flex-wrap">
+												<button name="save_pass" type="submit" class="btn button-md radius-xl shadow-sm mb-2 mr-2" style="background-color: #007bff; color: white; border: none;">
+													<i class="ti-lock"></i> <span>SAVE PASSWORD</span>
+												</button>
+
+												<a href="my-profile" class="btn button-md radius-xl shadow-sm mb-2" style="background-color: #6c757d; color: white; border: none;">
+													<i class="ti-arrow-left"></i> <span>CANCEL</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</form></main><script>document.querySelectorAll("form").forEach(form => form.addEventListener("submit", event => { event.preventDefault(); SmartServe.notify("Preview only; nothing saved.", "info"); }));</script></body></html>

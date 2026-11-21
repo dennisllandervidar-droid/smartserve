@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Priority verification preview</title><link rel="stylesheet" href="../../assets/css/forms.css?v=1791914479"><link rel="stylesheet" href="../../dashboard/assets/css/assets.css"><link rel="stylesheet" href="../../dashboard/assets/css/typography.css"><link rel="stylesheet" href="../../dashboard/assets/css/shortcodes/shortcodes.css"><link rel="stylesheet" href="../../dashboard/assets/css/style.css"><link rel="stylesheet" href="../../dashboard/assets/css/dashboard.css"><style>
+			/* --- Cleaned up and Modernized CSS --- */
+			:root {
+				--primary-green: #005141;
+				--soft-green: #eef7f1;
+			}
+
+			.modern-profile-card {
+				background: #ffffff;
+				border-radius: 20px;
+				box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+				border: 1px solid rgba(0,0,0,0.05);
+				overflow: hidden;
+				margin-bottom: 30px;
+			}
+
+			/* Header Section */
+			.profile-header {
+				padding: 40px;
+				border-bottom: 1px solid #f0f0f0;
+				display: flex;
+				align-items: center;
+				gap: 30px;
+				background: #ffffff;
+			}
+
+			.profile-avatar {
+				width: 140px;
+				height: 140px;
+				object-fit: cover;
+				border-radius: 50%;
+				border: 4px solid var(--soft-green);
+				box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+				flex-shrink: 0;
+			}
+
+			.profile-info h3 {
+				font-weight: 700;
+				color: #2d3436;
+				margin-bottom: 8px;
+				font-size: 1.8rem;
+			}
+
+			.profile-badge {
+				background: var(--soft-green);
+				color: var(--primary-green);
+				padding: 6px 16px;
+				border-radius: 20px;
+				font-size: 0.85rem;
+				font-weight: 600;
+				display: inline-block;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				margin-bottom: 15px;
+			}
+
+			/* Info Grid Section */
+			.info-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* Forces exactly 2 columns (like col-6) */
+                gap: 20px;
+                padding: 40px;
+                background: #fafbfc;
+            }
+            
+            /* Make sure it stacks on mobile (like col-12) */
+            @media (max-width: 768px) {
+                .info-grid {
+                    grid-template-columns: 1fr;
+                    padding: 20px;
+                }
+            }
+
+			.info-item {
+				background: #ffffff;
+				padding: 20px;
+				border-radius: 15px;
+				border: 1px solid #f0f0f0;
+				display: flex;
+				align-items: flex-start;
+				gap: 15px;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.info-item:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+				border-color: var(--soft-green);
+			}
+
+			.info-icon {
+				width: 45px;
+				height: 45px;
+				background: var(--soft-green);
+				color: var(--primary-green);
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.2rem;
+				flex-shrink: 0;
+			}
+
+			.info-content {
+				flex-grow: 1;
+				overflow: hidden;
+			}
+
+			.info-content label {
+				display: block;
+				font-size: 0.75rem;
+				color: #8795a1;
+				text-transform: uppercase;
+				font-weight: 700;
+				margin-bottom: 4px;
+				letter-spacing: 0.5px;
+			}
+
+			.info-content span {
+				color: #2d3436;
+				font-weight: 500;
+				font-size: 1rem;
+				display: block;
+				word-break: break-word;
+				line-height: 1.4;
+			}
+
+			/* Responsive */
+			@media (max-width: 768px) {
+				.profile-header {
+					flex-direction: column;
+					text-align: center;
+					padding: 30px 20px;
+				}
+				.info-grid {
+					padding: 20px;
+				}
+			}
+		</style><style>body{margin:0;background:#fcfcfc}.preview-top{background:#005141;color:#fff;padding:18px 36px;font-size:18px;font-weight:600}.preview-top small{font-size:12px;font-weight:400;margin-left:18px;opacity:.75}.preview-main{max-width:1160px;margin:30px auto;padding:0 24px}.preview-breadcrumb{margin-bottom:25px;font-size:20px;color:#234439}.preview-breadcrumb span{margin-left:15px;padding-left:15px;border-left:1px solid #ddd;font-size:14px;color:#89939c}.preview-status{font-size:13px;color:#718579;margin:0}@media(max-width:480px){.preview-main{padding:0 12px}.preview-top{padding:15px}.preview-top small{display:block;margin-left:0}.preview-breadcrumb{font-size:17px}}</style></head><body><header class="preview-top">SmartServe <small>De La Salle Araneta University · Design preview</small></header><main class="preview-main"><div class="preview-breadcrumb">Accounts <span>Student Profile</span></div><div class="modern-profile-card"><div class="profile-header"><img class="profile-avatar" src="../../assets/img/profile-pictures/default.jpg" alt="Default student avatar"><div class="profile-info"><div class="profile-badge">Student Account</div><h3>Sample Student</h3><p class="text-muted m-0">Member since October 2026</p></div></div><section class="ss-priority-card" data-review="none"><div class="ss-priority-heading"><div class="ss-priority-title"><span class="ss-priority-emblem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 20 6v6c0 5-8 9-8 9s-8-4-8-9V6z"/><path d="m8 12 3 3 5-6"/></svg></span><div><h5>Priority verification</h5><p>Review eligibility for priority service.</p></div></div><span class="ss-priority-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.01"/></svg>No review required</span></div><div class="ss-priority-details"><div><span class="ss-priority-label">Current priority</span><strong class="ss-priority-value">Pregnant</strong></div><div><span class="ss-priority-label">Booking access</span><strong>Priority bookings</strong></div></div></section><div class="info-grid"><div class="info-item"><div class="info-icon"><i class="ti-calendar"></i></div><div class="info-content"><label>Year level</label><span>1st Year</span></div></div><div class="info-item"><div class="info-icon"><i class="ti-book"></i></div><div class="info-content"><label>Course program</label><span>Doctor of Veterinary Medicine</span></div></div><div class="info-item"><div class="info-icon"><i class="ti-email"></i></div><div class="info-content"><label>Email address</label><span>student@example.com</span></div></div><div class="info-item"><div class="info-icon"><i class="ti-mobile"></i></div><div class="info-content"><label>Contact number</label><span>09123456789</span></div></div></div></div><p class="preview-status" role="status">Synthetic preview. Review controls do not change accounts.</p></main><script>document.addEventListener("submit",event=>event.preventDefault(),true);document.querySelector(".ss-priority-actions")?.addEventListener("click",event=>{if(event.target.closest("a,button")){event.preventDefault();document.querySelector(".preview-status").textContent="Preview only. No ID was opened and no review was saved.";}});</script></body></html>

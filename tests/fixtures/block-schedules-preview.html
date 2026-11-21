@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blocked schedule time controls</title><link rel="stylesheet" href="../../assets/css/forms.css"><link rel="stylesheet" href="../../dashboard/assets/css/assets.css"><script defer src="../../assets/js/forms.js"></script><style>body{margin:0;background:#f3f6fb;color:#1f2937;font-family:Arial,sans-serif}.preview-card{max-width:620px;margin:40px auto;padding:28px;background:#fff;border-radius:16px}.form-group{margin-bottom:18px}label{display:block;margin-bottom:8px}.row{display:flex;flex-wrap:wrap}.col-6{width:50%;padding:0 8px;box-sizing:border-box}.col-12{width:100%;padding:0 8px;box-sizing:border-box}.form-control{box-sizing:border-box;width:100%;padding:10px;border:1px solid #cad4ce;border-radius:6px}button{padding:12px 20px;border:0;border-radius:8px;background:#005141;color:#fff;font-weight:bold}.preview-status{margin-top:18px;color:#005141}small{line-height:1.6}@media(max-width:660px){.preview-card{margin:16px;padding:20px}}</style></head><body><main class="preview-card"><h1 style="font-size:24px">Add Blocked Schedule</h1><p style="color:#536781">Form preview</p><form method="POST"><div class="form-group"><label for="block_type">Block Type</label><select name="block_type" id="block_type" class="form-control" required><option value="full_day">Full Day</option><option value="time_range" selected>Time Range</option><option value="specific_purpose">Specific Purpose</option></select></div><div class="form-group" id="purpose_wrap" style="display:none"><label for="target_purpose">Specific Purpose</label><select name="target_purpose" id="target_purpose" class="form-control"><option value="">Select purpose</option><option value="Payment">Payment</option></select></div><div class="form-group"><label for="block_date">Date</label><input id="block_date" name="block_date" type="date" class="form-control" required min="2026-10-12" value="2026-10-12"></div><div class="row" id="time_range_wrap"><div class="col-6">
+    <div class="form-group">
+        <label for="start_time">Start Time</label>
+        <select name="start_time" id="start_time" class="form-control" aria-describedby="time_range_help">
+            <option value="">Select start time</option>
+                            <option value="07:00">7 AM</option>
+                            <option value="08:00">8 AM</option>
+                            <option value="09:00">9 AM</option>
+                            <option value="10:00">10 AM</option>
+                            <option value="11:00">11 AM</option>
+                            <option value="12:00">12 PM</option>
+                            <option value="13:00">1 PM</option>
+                            <option value="14:00">2 PM</option>
+                            <option value="15:00">3 PM</option>
+                            <option value="16:00" disabled>4 PM</option>
+                    </select>
+    </div>
+</div>
+<div class="col-6">
+    <div class="form-group">
+        <label for="end_time">End Time</label>
+        <select name="end_time" id="end_time" class="form-control" aria-describedby="time_range_help">
+            <option value="">Select end time</option>
+                            <option value="07:00">7 AM</option>
+                            <option value="08:00">8 AM</option>
+                            <option value="09:00">9 AM</option>
+                            <option value="10:00">10 AM</option>
+                            <option value="11:00">11 AM</option>
+                            <option value="12:00">12 PM</option>
+                            <option value="13:00">1 PM</option>
+                            <option value="14:00">2 PM</option>
+                            <option value="15:00">3 PM</option>
+                            <option value="16:00">4 PM</option>
+                    </select>
+    </div>
+</div>
+<div class="col-12">
+    <small id="time_range_help" class="text-muted d-block mb-3">Choose hourly times from 7 AM to 4 PM. End time must be later than start time.</small>
+</div>
+</div><div class="form-group"><label for="reason">Reason</label><input id="reason" name="reason" class="form-control" required value="Office maintenance"></div><button name="submit_block" type="submit">Save Block &amp; Notify</button></form><p id="preview_status" class="preview-status" role="status"></p></main><script src="../../assets/js/block-schedules.js"></script><script>document.querySelector("form").addEventListener("submit",event=>{event.preventDefault();document.getElementById("preview_status").textContent="Valid schedule. Preview only; no block was saved and no notifications were sent.";});</script></body></html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SmartServe validation preview</title>
+    <link rel="stylesheet" href="../../assets/css/forms.css">
+    <script src="../../assets/js/forms.js"></script>
+    <style>
+        body { background:#f4f8f5; font-family:Arial,sans-serif; margin:0; padding:28px; color:#172b24; }
+        main { background:white; max-width:520px; padding:28px; margin:auto; border-radius:16px; }
+        label { display:block; font-size:14px; margin:14px 0 5px; }
+        input { display:block; width:100%; box-sizing:border-box; padding:11px; border:1px solid #bbb; border-radius:7px; font:inherit; }
+        button { margin-top:18px; padding:11px 18px; background:#087830; border:0; border-radius:8px; color:white; cursor:pointer; }
+        p { color:#50625b; line-height:1.5; }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Form validation preview</h1>
+    <p>This fixture checks the shared validators and modal. It saves no data.</p>
+    <form id="previewForm">
+        <label for="fname">First name</label><input id="fname" name="fname" required>
+        <label for="mname">Middle name (optional)</label><input id="mname" name="mname">
+        <label for="lname">Last name</label><input id="lname" name="lname" required>
+        <label for="contact">Philippine mobile number</label><input id="contact" name="contact" required>
+        <label for="uname">Email address</label><input id="uname" name="uname" type="email" required>
+        <label for="address">Address</label><input id="address" name="address" required>
+        <button type="submit">Validate form</button>
+    </form>
+    <button type="button" id="confirmPreview">Preview confirmation</button>
+</main>
+<script>
+document.getElementById('previewForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    SmartServe.notify('All fields passed validation. No data was saved.', 'success');
+});
+document.getElementById('confirmPreview').addEventListener('click', function() {
+    SmartServe.confirm('Continue with this example?').then(function(confirmed) {
+        SmartServe.notify(confirmed ? 'Confirmed.' : 'Cancelled.', 'info');
+    });
+});
+</script>
+</body>
+</html>
